@@ -33,5 +33,17 @@ namespace pryNeptunoM
             myfrmDatos.Show();
             this.Hide();
         }
+
+        private void mostarDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var myfrmDatos = new frmDatos();
+            myfrmDatos.Show();
+            this.Hide();
+        }
+
+        private void filtarClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

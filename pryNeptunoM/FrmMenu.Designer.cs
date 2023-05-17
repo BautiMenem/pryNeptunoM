@@ -49,7 +49,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clientesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -72,12 +72,14 @@
             this.mostarDatosToolStripMenuItem.Name = "mostarDatosToolStripMenuItem";
             this.mostarDatosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mostarDatosToolStripMenuItem.Text = "Mostar Datos";
+            this.mostarDatosToolStripMenuItem.Click += new System.EventHandler(this.mostarDatosToolStripMenuItem_Click);
             // 
             // filtarClientesToolStripMenuItem
             // 
             this.filtarClientesToolStripMenuItem.Name = "filtarClientesToolStripMenuItem";
             this.filtarClientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.filtarClientesToolStripMenuItem.Text = "Filtar Clientes";
+            this.filtarClientesToolStripMenuItem.Click += new System.EventHandler(this.filtarClientesToolStripMenuItem_Click);
             // 
             // lblNeptuno
             // 
@@ -99,7 +101,10 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NEPTUNO - Menú";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -32,17 +32,17 @@
             this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNomCo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNomCon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCarg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDire = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCiu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colReg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPais = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,17 +61,17 @@
             // 
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10,
-            this.Column11});
+            this.colId,
+            this.colNomCo,
+            this.colNomCon,
+            this.colCarg,
+            this.colDire,
+            this.colCiu,
+            this.colReg,
+            this.colCod,
+            this.colPais,
+            this.colTel,
+            this.colFax});
             this.dgvDatos.Location = new System.Drawing.Point(24, 80);
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.Size = new System.Drawing.Size(542, 200);
@@ -90,7 +90,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(475, 286);
+            this.btnSalir.Location = new System.Drawing.Point(491, 286);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 4;
@@ -98,60 +98,60 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // Column1
+            // colId
             // 
-            this.Column1.HeaderText = "Id. Cliente";
-            this.Column1.Name = "Column1";
+            this.colId.HeaderText = "Id. Cliente";
+            this.colId.Name = "colId";
             // 
-            // Column2
+            // colNomCo
             // 
-            this.Column2.HeaderText = "Nombre de Compañía";
-            this.Column2.Name = "Column2";
+            this.colNomCo.HeaderText = "Nombre de Compañía";
+            this.colNomCo.Name = "colNomCo";
             // 
-            // Column3
+            // colNomCon
             // 
-            this.Column3.HeaderText = "Nombre de Concatcto";
-            this.Column3.Name = "Column3";
+            this.colNomCon.HeaderText = "Nombre de Concatcto";
+            this.colNomCon.Name = "colNomCon";
             // 
-            // Column4
+            // colCarg
             // 
-            this.Column4.HeaderText = "Cargo de Contacto";
-            this.Column4.Name = "Column4";
+            this.colCarg.HeaderText = "Cargo de Contacto";
+            this.colCarg.Name = "colCarg";
             // 
-            // Column5
+            // colDire
             // 
-            this.Column5.HeaderText = "Dirección";
-            this.Column5.Name = "Column5";
+            this.colDire.HeaderText = "Dirección";
+            this.colDire.Name = "colDire";
             // 
-            // Column6
+            // colCiu
             // 
-            this.Column6.HeaderText = "Ciudad";
-            this.Column6.Name = "Column6";
+            this.colCiu.HeaderText = "Ciudad";
+            this.colCiu.Name = "colCiu";
             // 
-            // Column7
+            // colReg
             // 
-            this.Column7.HeaderText = "Region";
-            this.Column7.Name = "Column7";
+            this.colReg.HeaderText = "Region";
+            this.colReg.Name = "colReg";
             // 
-            // Column8
+            // colCod
             // 
-            this.Column8.HeaderText = "Código Postal";
-            this.Column8.Name = "Column8";
+            this.colCod.HeaderText = "Código Postal";
+            this.colCod.Name = "colCod";
             // 
-            // Column9
+            // colPais
             // 
-            this.Column9.HeaderText = "País";
-            this.Column9.Name = "Column9";
+            this.colPais.HeaderText = "País";
+            this.colPais.Name = "colPais";
             // 
-            // Column10
+            // colTel
             // 
-            this.Column10.HeaderText = "Teléfono";
-            this.Column10.Name = "Column10";
+            this.colTel.HeaderText = "Teléfono";
+            this.colTel.Name = "colTel";
             // 
-            // Column11
+            // colFax
             // 
-            this.Column11.HeaderText = "Fax";
-            this.Column11.Name = "Column11";
+            this.colFax.HeaderText = "Fax";
+            this.colFax.Name = "colFax";
             // 
             // frmDatos
             // 
@@ -181,16 +181,16 @@
         private System.Windows.Forms.DataGridView dgvDatos;
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNomCo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNomCon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCarg;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDire;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCiu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colReg;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPais;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFax;
     }
 }

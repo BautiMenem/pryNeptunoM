@@ -29,8 +29,8 @@ namespace pryNeptunoM
                 if (txtContra.Text == "Admin1")
                 {
                     MessageBox.Show("Ingresaste Correctamente" , "Ingreso a Base");
-                    var myfrmDatos = new frmDatos();
-                    myfrmDatos.Show();
+                    var myfrmMenu = new FrmMenu();
+                    myfrmMenu.Show();
                     this.Hide();
                 }
                 else
