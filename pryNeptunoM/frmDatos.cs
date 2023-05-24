@@ -18,6 +18,8 @@ namespace pryNeptunoM
         OleDbCommand CmdBaseNep = null;
         OleDbDataReader LectorBD = null;
 
+        
+
        
         public frmDatos()
         {
