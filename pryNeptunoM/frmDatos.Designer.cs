@@ -43,7 +43,6 @@
             this.colFax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnFiltrar = new System.Windows.Forms.Button();
             this.lblPais = new System.Windows.Forms.Label();
             this.lblCiudad = new System.Windows.Forms.Label();
             this.cboPais = new System.Windows.Forms.ComboBox();
@@ -173,24 +172,14 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // btnFiltrar
-            // 
-            this.btnFiltrar.Location = new System.Drawing.Point(24, 350);
-            this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
-            this.btnFiltrar.TabIndex = 5;
-            this.btnFiltrar.Text = "Filtrar";
-            this.btnFiltrar.UseVisualStyleBackColor = true;
-            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
-            // 
             // lblPais
             // 
             this.lblPais.AutoSize = true;
             this.lblPais.Location = new System.Drawing.Point(24, 293);
             this.lblPais.Name = "lblPais";
-            this.lblPais.Size = new System.Drawing.Size(48, 13);
+            this.lblPais.Size = new System.Drawing.Size(27, 13);
             this.lblPais.TabIndex = 6;
-            this.lblPais.Text = "Columna";
+            this.lblPais.Text = "Pais";
             // 
             // lblCiudad
             // 
@@ -209,6 +198,7 @@
             this.cboPais.Name = "cboPais";
             this.cboPais.Size = new System.Drawing.Size(81, 21);
             this.cboPais.TabIndex = 8;
+            this.cboPais.SelectedIndexChanged += new System.EventHandler(this.cboPais_SelectedIndexChanged);
             // 
             // cboCiudad
             // 
@@ -230,6 +220,7 @@
             this.cboCiudad.Name = "cboCiudad";
             this.cboCiudad.Size = new System.Drawing.Size(81, 21);
             this.cboCiudad.TabIndex = 9;
+            this.cboCiudad.SelectedIndexChanged += new System.EventHandler(this.cboCiudad_SelectedIndexChanged);
             // 
             // frmDatos
             // 
@@ -241,7 +232,6 @@
             this.Controls.Add(this.cboPais);
             this.Controls.Add(this.lblCiudad);
             this.Controls.Add(this.lblPais);
-            this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.dgvDatos);
@@ -275,7 +265,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPais;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTel;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFax;
-        private System.Windows.Forms.Button btnFiltrar;
         private System.Windows.Forms.Label lblPais;
         private System.Windows.Forms.Label lblCiudad;
         private System.Windows.Forms.ComboBox cboPais;

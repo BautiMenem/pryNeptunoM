@@ -33,8 +33,8 @@
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mostarDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filtarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblNeptuno = new System.Windows.Forms.Label();
             this.conectarABaseExternaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblNeptuno = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,6 +83,13 @@
             this.filtarClientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.filtarClientesToolStripMenuItem.Click += new System.EventHandler(this.filtarClientesToolStripMenuItem_Click);
             // 
+            // conectarABaseExternaToolStripMenuItem
+            // 
+            this.conectarABaseExternaToolStripMenuItem.Name = "conectarABaseExternaToolStripMenuItem";
+            this.conectarABaseExternaToolStripMenuItem.Size = new System.Drawing.Size(145, 20);
+            this.conectarABaseExternaToolStripMenuItem.Text = "Conectar a Base Externa";
+            this.conectarABaseExternaToolStripMenuItem.Click += new System.EventHandler(this.conectarABaseExternaToolStripMenuItem_Click);
+            // 
             // lblNeptuno
             // 
             this.lblNeptuno.AutoSize = true;
@@ -92,13 +99,6 @@
             this.lblNeptuno.Size = new System.Drawing.Size(229, 33);
             this.lblNeptuno.TabIndex = 5;
             this.lblNeptuno.Text = "NEPTUNO. SRL";
-            // 
-            // conectarABaseExternaToolStripMenuItem
-            // 
-            this.conectarABaseExternaToolStripMenuItem.Name = "conectarABaseExternaToolStripMenuItem";
-            this.conectarABaseExternaToolStripMenuItem.Size = new System.Drawing.Size(145, 20);
-            this.conectarABaseExternaToolStripMenuItem.Text = "Conectar a Base Externa";
-            this.conectarABaseExternaToolStripMenuItem.Click += new System.EventHandler(this.conectarABaseExternaToolStripMenuItem_Click);
             // 
             // FrmMenu
             // 
@@ -115,6 +115,7 @@
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NEPTUNO - Menú";
+            this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

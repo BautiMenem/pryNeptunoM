@@ -22,7 +22,7 @@ namespace pryNeptunoM
         public frmDatos()
         {
             ConBaseNep = new OleDbConnection();
-            ConBaseNep.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\NEPTUNO.accdb";
+            ConBaseNep.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:NEPTUNO.accdb";
             ConBaseNep.Open();
 
             InitializeComponent();
@@ -34,8 +34,8 @@ namespace pryNeptunoM
         }
 
         private void frmDatos_Load(object sender, EventArgs e)
-        {
-            
+        { 
+
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -71,24 +71,20 @@ namespace pryNeptunoM
 
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
-            HashSet<string> Paises = new HashSet<string>();
-            HashSet<string> Ciudades = new HashSet<string>();
+           
+        }
 
-            while (LectorBD.Read())
-            {
-                dgvDatos.Rows.Add(LectorBD[0], LectorBD[1], LectorBD[2], LectorBD[3], LectorBD[4], LectorBD[5], LectorBD[6], LectorBD[7], LectorBD[8], LectorBD[9], LectorBD[10]);
+        private void cboPais_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ClsBaseD clsBaseDeDatos = new ClsBaseD();
+            clsBaseDeDatos.ListarPais(dgvDatos, "NEPTUNO", "Clientes", cboPais, cboCiudad);
+        }
 
-                string Pais = LectorBD[8].ToString();
-                string ciudad = LectorBD[5].ToString();
-                Paises.Add(Pais);
-                Ciudades.Add(ciudad);
-
-
-
-            }
-
-            cboCiudad.Items.AddRange(Ciudades.ToArray());
-            cboPais.Items.AddRange(Paises.ToArray());
+        private void cboCiudad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ClsBaseD clsBaseDeDatos = new ClsBaseD();
+            clsBaseDeDatos.ListarCiudad(dgvDatos, "NEPTUNO", "Clientes", cboCiudad, cboPais);
         }
     }
+    
 }
