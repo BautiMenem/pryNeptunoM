@@ -34,6 +34,7 @@
             this.mostarDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filtarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblNeptuno = new System.Windows.Forms.Label();
+            this.conectarABaseExternaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +52,8 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clientesToolStripMenuItem});
+            this.clientesToolStripMenuItem,
+            this.conectarABaseExternaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(402, 24);
@@ -66,6 +68,7 @@
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.clientesToolStripMenuItem.Text = "Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // mostarDatosToolStripMenuItem
             // 
@@ -78,7 +81,6 @@
             // 
             this.filtarClientesToolStripMenuItem.Name = "filtarClientesToolStripMenuItem";
             this.filtarClientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.filtarClientesToolStripMenuItem.Text = "Filtar Clientes";
             this.filtarClientesToolStripMenuItem.Click += new System.EventHandler(this.filtarClientesToolStripMenuItem_Click);
             // 
             // lblNeptuno
@@ -90,6 +92,13 @@
             this.lblNeptuno.Size = new System.Drawing.Size(229, 33);
             this.lblNeptuno.TabIndex = 5;
             this.lblNeptuno.Text = "NEPTUNO. SRL";
+            // 
+            // conectarABaseExternaToolStripMenuItem
+            // 
+            this.conectarABaseExternaToolStripMenuItem.Name = "conectarABaseExternaToolStripMenuItem";
+            this.conectarABaseExternaToolStripMenuItem.Size = new System.Drawing.Size(145, 20);
+            this.conectarABaseExternaToolStripMenuItem.Text = "Conectar a Base Externa";
+            this.conectarABaseExternaToolStripMenuItem.Click += new System.EventHandler(this.conectarABaseExternaToolStripMenuItem_Click);
             // 
             // FrmMenu
             // 
@@ -120,5 +129,6 @@
         private System.Windows.Forms.ToolStripMenuItem mostarDatosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filtarClientesToolStripMenuItem;
         private System.Windows.Forms.Label lblNeptuno;
+        private System.Windows.Forms.ToolStripMenuItem conectarABaseExternaToolStripMenuItem;
     }
 }

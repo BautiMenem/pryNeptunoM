@@ -43,6 +43,11 @@
             this.colFax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnFiltrar = new System.Windows.Forms.Button();
+            this.lblPais = new System.Windows.Forms.Label();
+            this.lblCiudad = new System.Windows.Forms.Label();
+            this.cboPais = new System.Windows.Forms.ComboBox();
+            this.cboCiudad = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +55,7 @@
             // 
             this.lblCon.AutoSize = true;
             this.lblCon.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCon.Location = new System.Drawing.Point(260, 9);
+            this.lblCon.Location = new System.Drawing.Point(530, 9);
             this.lblCon.Name = "lblCon";
             this.lblCon.Size = new System.Drawing.Size(68, 25);
             this.lblCon.TabIndex = 0;
@@ -59,6 +64,8 @@
             // 
             // dgvDatos
             // 
+            this.dgvDatos.AllowUserToDeleteRows = false;
+            this.dgvDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colId,
@@ -74,7 +81,9 @@
             this.colFax});
             this.dgvDatos.Location = new System.Drawing.Point(24, 80);
             this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.Size = new System.Drawing.Size(542, 200);
+            this.dgvDatos.ReadOnly = true;
+            this.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDatos.Size = new System.Drawing.Size(1040, 200);
             this.dgvDatos.TabIndex = 2;
             this.dgvDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellContentClick);
             // 
@@ -82,56 +91,67 @@
             // 
             this.colId.HeaderText = "Id. Cliente";
             this.colId.Name = "colId";
+            this.colId.ReadOnly = true;
             // 
             // colNomCo
             // 
             this.colNomCo.HeaderText = "Nombre de Compañía";
             this.colNomCo.Name = "colNomCo";
+            this.colNomCo.ReadOnly = true;
             // 
             // colNomCon
             // 
             this.colNomCon.HeaderText = "Nombre de Concatcto";
             this.colNomCon.Name = "colNomCon";
+            this.colNomCon.ReadOnly = true;
             // 
             // colCarg
             // 
             this.colCarg.HeaderText = "Cargo de Contacto";
             this.colCarg.Name = "colCarg";
+            this.colCarg.ReadOnly = true;
             // 
             // colDire
             // 
             this.colDire.HeaderText = "Dirección";
             this.colDire.Name = "colDire";
+            this.colDire.ReadOnly = true;
             // 
             // colCiu
             // 
             this.colCiu.HeaderText = "Ciudad";
             this.colCiu.Name = "colCiu";
+            this.colCiu.ReadOnly = true;
             // 
             // colReg
             // 
             this.colReg.HeaderText = "Region";
             this.colReg.Name = "colReg";
+            this.colReg.ReadOnly = true;
             // 
             // colCod
             // 
             this.colCod.HeaderText = "Código Postal";
             this.colCod.Name = "colCod";
+            this.colCod.ReadOnly = true;
             // 
             // colPais
             // 
             this.colPais.HeaderText = "País";
             this.colPais.Name = "colPais";
+            this.colPais.ReadOnly = true;
             // 
             // colTel
             // 
             this.colTel.HeaderText = "Teléfono";
             this.colTel.Name = "colTel";
+            this.colTel.ReadOnly = true;
             // 
             // colFax
             // 
             this.colFax.HeaderText = "Fax";
             this.colFax.Name = "colFax";
+            this.colFax.ReadOnly = true;
             // 
             // btnMostrar
             // 
@@ -145,7 +165,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(491, 286);
+            this.btnSalir.Location = new System.Drawing.Point(989, 350);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 4;
@@ -153,12 +173,75 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.Location = new System.Drawing.Point(24, 350);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
+            this.btnFiltrar.TabIndex = 5;
+            this.btnFiltrar.Text = "Filtrar";
+            this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
+            // 
+            // lblPais
+            // 
+            this.lblPais.AutoSize = true;
+            this.lblPais.Location = new System.Drawing.Point(24, 293);
+            this.lblPais.Name = "lblPais";
+            this.lblPais.Size = new System.Drawing.Size(48, 13);
+            this.lblPais.TabIndex = 6;
+            this.lblPais.Text = "Columna";
+            // 
+            // lblCiudad
+            // 
+            this.lblCiudad.AutoSize = true;
+            this.lblCiudad.Location = new System.Drawing.Point(24, 322);
+            this.lblCiudad.Name = "lblCiudad";
+            this.lblCiudad.Size = new System.Drawing.Size(40, 13);
+            this.lblCiudad.TabIndex = 7;
+            this.lblCiudad.Text = "Ciudad";
+            // 
+            // cboPais
+            // 
+            this.cboPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPais.FormattingEnabled = true;
+            this.cboPais.Location = new System.Drawing.Point(77, 290);
+            this.cboPais.Name = "cboPais";
+            this.cboPais.Size = new System.Drawing.Size(81, 21);
+            this.cboPais.TabIndex = 8;
+            // 
+            // cboCiudad
+            // 
+            this.cboCiudad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCiudad.FormattingEnabled = true;
+            this.cboCiudad.Items.AddRange(new object[] {
+            "Id. Cliente",
+            "Nombre de Compañia",
+            "Nombre de Contacto",
+            "Cargo de Contacto",
+            "Dirección",
+            "Ciudad",
+            "Region",
+            "Código Postal",
+            "País",
+            "Teléfono",
+            "Fax"});
+            this.cboCiudad.Location = new System.Drawing.Point(77, 323);
+            this.cboCiudad.Name = "cboCiudad";
+            this.cboCiudad.Size = new System.Drawing.Size(81, 21);
+            this.cboCiudad.TabIndex = 9;
+            // 
             // frmDatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(579, 323);
+            this.ClientSize = new System.Drawing.Size(1097, 385);
+            this.Controls.Add(this.cboCiudad);
+            this.Controls.Add(this.cboPais);
+            this.Controls.Add(this.lblCiudad);
+            this.Controls.Add(this.lblPais);
+            this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.dgvDatos);
@@ -167,7 +250,7 @@
             this.MinimizeBox = false;
             this.Name = "frmDatos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "d ffod+  sa gas ggas g   ww";
+            this.Text = "NEPTUNO - Datos";
             this.Load += new System.EventHandler(this.frmDatos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.ResumeLayout(false);
@@ -192,5 +275,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPais;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTel;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFax;
+        private System.Windows.Forms.Button btnFiltrar;
+        private System.Windows.Forms.Label lblPais;
+        private System.Windows.Forms.Label lblCiudad;
+        private System.Windows.Forms.ComboBox cboPais;
+        private System.Windows.Forms.ComboBox cboCiudad;
     }
 }

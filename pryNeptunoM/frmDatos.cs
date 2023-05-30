@@ -18,9 +18,7 @@ namespace pryNeptunoM
         OleDbCommand CmdBaseNep = null;
         OleDbDataReader LectorBD = null;
 
-        
-
-       
+          
         public frmDatos()
         {
             ConBaseNep = new OleDbConnection();
@@ -37,7 +35,7 @@ namespace pryNeptunoM
 
         private void frmDatos_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -64,6 +62,33 @@ namespace pryNeptunoM
         private void dgvDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txtBuscar_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            HashSet<string> Paises = new HashSet<string>();
+            HashSet<string> Ciudades = new HashSet<string>();
+
+            while (LectorBD.Read())
+            {
+                dgvDatos.Rows.Add(LectorBD[0], LectorBD[1], LectorBD[2], LectorBD[3], LectorBD[4], LectorBD[5], LectorBD[6], LectorBD[7], LectorBD[8], LectorBD[9], LectorBD[10]);
+
+                string Pais = LectorBD[8].ToString();
+                string ciudad = LectorBD[5].ToString();
+                Paises.Add(Pais);
+                Ciudades.Add(ciudad);
+
+
+
+            }
+
+            cboCiudad.Items.AddRange(Ciudades.ToArray());
+            cboPais.Items.AddRange(Paises.ToArray());
         }
     }
 }

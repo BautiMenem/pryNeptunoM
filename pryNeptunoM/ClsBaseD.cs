@@ -36,10 +36,6 @@ namespace pryNeptunoM
 
         public void ListarGrilla()
         {
-            DataT tablas;
-            tablas = conn.GetSchema("tablas").ToString();
-
-
 
         }
 

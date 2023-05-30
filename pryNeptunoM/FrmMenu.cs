@@ -45,5 +45,17 @@ namespace pryNeptunoM
         {
            
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void conectarABaseExternaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var myfrmConexion = new frmConexion();
+            myfrmConexion.Show();
+            this.Hide();
+        }
     }
 }
