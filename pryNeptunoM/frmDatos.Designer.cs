@@ -204,18 +204,6 @@
             // 
             this.cboCiudad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCiudad.FormattingEnabled = true;
-            this.cboCiudad.Items.AddRange(new object[] {
-            "Id. Cliente",
-            "Nombre de Compañia",
-            "Nombre de Contacto",
-            "Cargo de Contacto",
-            "Dirección",
-            "Ciudad",
-            "Region",
-            "Código Postal",
-            "País",
-            "Teléfono",
-            "Fax"});
             this.cboCiudad.Location = new System.Drawing.Point(77, 323);
             this.cboCiudad.Name = "cboCiudad";
             this.cboCiudad.Size = new System.Drawing.Size(81, 21);
